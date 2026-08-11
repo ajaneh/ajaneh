@@ -1,137 +1,48 @@
-## Welcome
-Hi, I'm Alex. My technical journey began with an M.S. in Computational Chemistry. Then full-stack software creation. Now I'm combining my gained expertise and pivoting to data analytics!
-Check out my most recent projects
+# Alex Heyert
 
-# Continuous Intelligence Portfolio
+### Computational chemistry · scientific software · data analytics
 
-Alex Heyert
+I work at the intersection of **science, code, and quantitative analysis**.
 
-2026-04
+My background spans computational chemistry research, molecular simulation, scientific software engineering, and applied data analysis. I hold an M.S. in Chemistry focused on theoretical and computational chemistry and am currently completing an M.S. in Data Analytics.
 
-This page summarizes my work on **continuous intelligence** projects.
+## Featured: Science & Research Portfolio
 
-## 1. Professional Project
+[![Mixed-resolution ionic liquid modeling research](https://raw.githubusercontent.com/ajaneh/science-profile/main/computational-challenge.png)](https://github.com/ajaneh/science-profile)
 
-### [Repository Link](https://github.com/ajaneh/cintel-01-getting-started)
+### [Explore my Science & Research Portfolio →](https://github.com/ajaneh/science-profile)
 
-### Brief Overview of Project Tools and Choices
+I'm building an archive of my scientific work with an emphasis on **what I actually did, how I approached the problem, and what the evidence showed**.
 
-All data pipelines in these repositories were built with a consistent, high-performance tech stack to ensure reproducibility and rapid execution:
+Current material includes:
 
-*   **Runtime:** `Python 3.14` (Leveraging the latest language features and performance optimizations)
-*   **Tooling & Env Management:** `uv` (Used for lightning-fast dependency resolution and deterministic environments)
-*   **Data Engine:** `Polars` (Utilized for multi-threaded, high-performance data manipulation and analysis)
-*   **Visualization:** `Matplotlib` (Standardized framework for all analytical plotting and reporting)
+- Molecular dynamics and computational biophysics
+- Ionic-liquid / biomolecule interactions
+- Coarse-grained and mixed-resolution modeling
+- Scientific programming and quantitative analysis
+- Research publications, posters, and archived materials
+- Scientific computing and laboratory automation
 
-## 2. Anomaly Detection
+## Beyond the research
 
-### [Repository Link](https://github.com/ajaneh/cintel-02-static-anomalies)
+I moved from computational research into professional software development, including several years developing **C#/.NET scientific data-analysis software at Agilent Technologies**. My current graduate study is bringing those threads together: scientific reasoning, software, statistics, and data.
 
-### Techniques
+I am open to work! Contract or Freelance. Contact me on [LinkedIn](https://www.linkedin.com/in/alex-heyert/)
 
-I used example data for an adult clinic that contained age and height. Anomalies were detected with rule based flagging. Initially the project used thresholds for age and height. My modification calculated the Z scores for age and height and used a threshold of ± 2. 
-
-### Artifacts
-
-[Artifacts Folder](https://github.com/ajaneh/cintel-02-static-anomalies/tree/main/artifacts)
-![Scatterplot](https://github.com/ajaneh/cintel-02-static-anomalies/blob/main/artifacts/scatter_plot_alex.png?raw=true)
+**Tools I've worked with:** Python · C#/.NET · SQL · Bash · Linux/Unix · SLURM/HPC · AMBER · CPPTRAJ · Git · Angular · WPF · 
 
 
-### Insights
-
-Use of Z score only flagged one anomaly, a patient 118 years old. This a notable outlier visible in the scatterplot. It's also interesting to note that as age increased height decreased, which is consistent with the real life phenomenon. 
-
-## 3. Signal Design
-
-### [Repository Link](https://github.com/ajaneh/cintel-03-signal-design)
-
-### Signals
-
-The signals used were Error rate (Errors ÷ Requests) and Average latency time (Latency ÷ Requests). Latency percentiles were calculated as well and tail latencies were logged. 
-
-### Artifacts
-![Histogram](https://github.com/ajaneh/cintel-03-signal-design/blob/main/artifacts/latency_histogram.png?raw=true)
-
-![SignalsVLatency](https://github.com/ajaneh/cintel-03-signal-design/blob/main/artifacts/requests_error_rate_vs_latency.png?raw=true)
-[Aritfacts Folder](https://github.com/ajaneh/cintel-03-signal-design/tree/main/artifacts)
-
-### Insights
-
-Only 3 of the data rows had a latency above the 90th percentile. Of these three the error rate was on the higher side, averaging around 4.5%, the total number of requests was also high.
-Without detailed latency information (latency per request versus per error, for example) it's difficult to determine if errors are slow or if more requests result in greater latency. 
-
-## 4. Rolling Monitoring
-
-### [Repository Link](https://github.com/ajaneh/cintel-04-rolling-monitoring)
-
-### Techniques
-
-I acquired ridership data from the Chicago Transit Autority. I used their data portal to simplify the data I exported and used. After grouping by date I aggregated the sum of rows from the "rides" field, because I was interested in rides over time rather than rides per seperate station.
-
-The rolling mean was the main signal of interest. The size of the window was adjusted several times in order to meaningfully smooth out noise. When choosing window size it's important to understand the natural time sequences of the data you're working with.
-
-### Artifacts
-![Monthly Window](https://github.com/ajaneh/cintel-04-rolling-monitoring/blob/main/artifacts/window_30.png?raw=true) 
-![Annual Window](https://github.com/ajaneh/cintel-04-rolling-monitoring/blob/main/artifacts/window_365.png?raw=true)
+<sub>Research publications and archived materials may list me as **Alexanndra J. Heyert**. I have always gone by **Alex**, but chose to publish under my full name to be visibly represented as a woman in science.</sub>
 
 
-[Artifact Folder](https://github.com/ajaneh/cintel-04-rolling-monitoring/tree/main/artifacts)
+# MSDA Courses and Progression 
 
-### Insights
-
-Noise reduced as window size increased. When looking at the graph with a "monthly window" it appears that ridership increased in warmer seasons (summer, fall) and sharply decreased in the winter and spring.
-Ridership seems to increase from 2001 until it's maximum in 2015. We then see a dramatic decrease around 2019 - 2020. Since we know larger winows increase lag it's reasonable to assume that the dramatic decrease was caused by the COVID shutdowns. Ridership has increased in the last 5 years but not to pre 2020 averages. This may be indicicative of the increase in remote jobs since COVID.
-
-## 5. Drift Detection
-
-### [Repository Link](https://github.com/ajaneh/cintel-05-drift-detection)
-
-### Techniques
-
-I used "NCDC Hourly Global Surface Variables-Selected Subset" (https://catalog.data.gov/dataset/ncdc-hourly-global-surface-variables-selected-subset) to gather times and temperature data from "Sacramento Airport Surface Temperatures" I filtered the temperatures down so they only had a TMP_Q_CODE of 5 which corresponded to values deemed reliable. Because of this filter. The temperature readings are not consistently spaced apart in time.
-
-Initially I tried to use a trailing baseline but this wasn't feasible with the inconsistent sampling rate.
-I established a baseline by calculating the average temperature for the first 20% of the data. A baseline standard deviation was also calculated to assess for volatility drift.
-Drift detection thresholds were set to 10% above the baseline mean. Volatility threshold was the baseline standard deviation + 1° C.
-
-### Artifacts
-
-![Temperature](https://github.com/ajaneh/cintel-05-drift-detection/blob/main/artifacts/temperature_trends_alex.png?raw=true)
-![Threshold](https://github.com/ajaneh/cintel-05-drift-detection/blob/main/artifacts/threshold_colored_alex.png?raw=true)
-[Artifacts Folder](https://github.com/ajaneh/cintel-05-drift-detection/tree/main/artifacts)
-
-### Insights
-
-Air temperature data from an airport wasn't a perfect choice for this project. The data was collected over one year, so the raw results follow a near normal distribution.
-The most noticable "drift" occurs during summer time, when higher temperatures would be expected. It's interesting to note that volatility increases during the summer as well. 
-
-## 6. Continuous Intelligence Pipeline
-
-### [Repository Link](https://github.com/ajaneh/cintel-06-continuous-intelligence)
-
-### Techniques
-
-The signals of interest that were created were averages and z scores for Error rate and Latency. The system was summarized with the averages of each incoming signal. Then expanded to include average error rate, average latency, and average Z scores for error rate and latency. The entire dataset was used to evaluate the system's state, rather than flagging individual values.
-The example only noted whether or not the system was stable, I added a field called "degradation reason" to assist with troubleshooting the system and I added detected single point anomalies to the log.
-
-### Artifacts
-![Raw Data](https://github.com/ajaneh/cintel-06-continuous-intelligence/blob/main/artifacts/raw_metrics.png?raw=true)
-![Signals](https://github.com/ajaneh/cintel-06-continuous-intelligence/blob/main/artifacts/signals.png?raw=true)
+## (coming soon) Data Visualization 
+## Applied Machine Learning
+## Fundamentals of Data Analytics
+## Continuous Intelligence [Portfolio](https://github.com/ajaneh/cintel-06-continuous-intelligence/blob/main/docs/ci-portfolio.md)
 
 
-
-
-| requests| avg errors| avg error rate| avg latency (ms)| avg_error_rate_zscore | avg_latency_zscore | system state | degradation reason |
-|:---|:-:|:-:|:-:|:-:|:-:|:-:|---:|
-|157.35 | 4.433 | 0.026 | 33.712 | 0.139 | 0.226 | STABLE| NONE |
-
-
-[Artifacts Folder](https://github.com/ajaneh/cintel-06-continuous-intelligence/tree/main/artifacts)
-
-### Assessment
-
-The averages of this small dataset do indicate stability, both calculated z scores were less than 0.3. 
-A small dataset doesn't always allow for meaningful interpretation. However if we think of this as one part of a larger dataset, perhaps representative of metrics every 5 minutes, the system summary would be useful for detecting system abnormalities.
 
 
 
