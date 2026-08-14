@@ -38,7 +38,7 @@ I am open to work! Contract or Freelance. Contact me on [LinkedIn](https://www.l
 # MSDA Courses and Progression 
 
 ## (coming soon) Data Visualization 
-## Applied Machine Learning [Portfolio](https://github.com/ajaneh/ML-portolfio/README.md)
+## Applied Machine Learning [Portfolio](https://github.com/ajaneh/ML-portolfio/blob/main/README.md)
 ## Fundamentals of Data Analytics
 ## Continuous Intelligence [Portfolio](https://github.com/ajaneh/cintel-06-continuous-intelligence/blob/main/docs/ci-portfolio.md)
 
