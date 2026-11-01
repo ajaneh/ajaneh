@@ -27,17 +27,15 @@ Current material includes:
 
 I moved from computational research into professional software development, including several years developing **C#/.NET scientific data-analysis software at Agilent Technologies**. My current graduate study is bringing those threads together: scientific reasoning, software, statistics, and data.
 
-I am open to work! Contract or Freelance. Contact me on [LinkedIn](https://www.linkedin.com/in/alex-heyert/)
+I am open to work! Contact me on [LinkedIn](https://www.linkedin.com/in/alex-heyert/)
 
-**Tools I've worked with:** Python · C#/.NET · SQL · Bash · Linux/Unix · SLURM/HPC · AMBER · CPPTRAJ · Git · Angular · WPF · 
-
-
-<sub>Research publications and archived materials may list me as **Alexanndra J. Heyert**. I have always gone by **Alex**, but chose to publish under my full name to be visibly represented as a woman in science.</sub>
+**Tools I've worked with:** Python · C#/.NET · SQL · Bash · Linux/Unix · SLURM, HPC · AMBER, GROMACS, NAMD, CPPTRAJ · Git · Angular · WPF · Typescript · Tableau · Visual Studio · AWS 
 
 
 # MSDA Courses and Progression 
 
-## (coming soon) Data Visualization 
+## Web Scraping and NLP - In Progress
+## Data Visualization [Tableau Public](https://public.tableau.com/app/profile/alex.heyert/vizzes)
 ## Applied Machine Learning [Portfolio](https://github.com/ajaneh/ML-portolfio/blob/main/README.md)
 ## Fundamentals of Data Analytics
 ## Continuous Intelligence [Portfolio](https://github.com/ajaneh/cintel-06-continuous-intelligence/blob/main/docs/ci-portfolio.md)
